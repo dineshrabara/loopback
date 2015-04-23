@@ -55,7 +55,7 @@ module.exports = function(app) {
     if (err) throw err;
 
     var User = app.models.User;
-    User.create({username:'dinesh',email: 'dinesh@sphererays.net', password: '123456'}, function(err, user) {
+    User.create({email: "dinesh@sphererays.net", password: "123456"}, function(err, user) {
       if (err) throw err;
 
       console.log(user);
@@ -74,14 +74,6 @@ module.exports = function(app) {
 //RoleMapping
 module.exports = function(app) {
   app.dataSources.mysqlDs.automigrate('RoleMapping', function(err) {
-    if (err) throw err;
-        
-  });
-};
-
-//Role
-module.exports = function(app) {
-  app.dataSources.mysqlDs.automigrate('Role', function(err) {
     if (err) throw err;
         
   });
